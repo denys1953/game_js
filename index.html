@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <meta
+      name="viewport"
+      content="width=device-width, 	initial-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/	css?family=Roboto:300i,400&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/vue"></script>
+    <link
+      href="https://fonts.googleapis.com/	css?family=Caveat|Ubuntu:400,500,700&display=swap"
+      rel="<stylesheet	</stylesheet>"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/	jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="container">
+        <div class="level">
+          <span>You are a: {{ level }}</span>
+        </div>
+        <hr />
+        <div class="xp">
+          <span>Current XP: {{ xp }}</span>
+        </div>
+        <progress-bar v-bind:val="xp" v-bind:max="maxNumbers"></progress-bar>
+        <div id="click">
+          <div class="row">
+            <button
+              id="button_5"
+              style="height: 50px;"
+              class="col-lg-5 btn btn-success"
+              @click="AddXP"
+            >
+              Add XP
+            </button>
+            <button
+              id="button_5"
+              style="height: 50px;"
+              class="col-lg-5 btn btn-success"
+              @click="DecreaseXP"
+            >
+              Decrease XP
+            </button>
+          </div>
+          <hr />
+          <div class="sp">
+            <span id="sp">{{ getScore }}</span>
+            <span id="sp2">You won!!!</span>
+          </div>
+          <hr />
+          <div class="row">
+            <button
+              style="margin: 0 auto; height: 50px; margin-top: 20px;"
+              class="col-12 but btn-info"
+              id="but"
+            >
+              Restart
+            </button>
+          </div>
+          <div class="row">
+            <button
+              @click="saveContent"
+              style="
+                margin: 0 auto;
+                height: 50px;
+                margin-top: 20px;
+                border-radius: 5px;
+                transition: 0.2s;
+                border: none;
+              "
+              class="col-sm-3 but btn-primary"
+              id="but1"
+            >
+              Save
+            </button>
+            <button
+              @click="useContent"
+              style="
+                margin: 0 auto;
+                height: 50px;
+                border-radius: 5px;
+                margin-top: 20px;
+                transition: 0.2s;
+                border: none;
+              "
+              class="col-sm-3 but btn-primary"
+              id="but2"
+            >
+              Use saves
+            </button>
+            <button
+              style="margin: 0 auto; height: 50px; margin-top: 20px;"
+              id="sss"
+              class="col-sm-3 btn btn-danger"
+            >
+              Delete saves
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

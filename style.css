@@ -1,0 +1,50 @@
+body{
+/*	overflow-y: hidden;*/ 
+	overflow-x: hidden; 
+}
+.level{
+	font-size: 50px;
+	text-align: center;
+}
+.xp{
+	font-size: 50px;
+	text-align: center;
+}
+#button_5{
+	
+	margin:0 auto;
+	margin-top: 10px;
+
+}
+.sp{
+	font-size: 40px;
+	text-align: center;
+	margin-top: 10px;
+}
+@media screen and (max-width: 665px){
+	.level{
+		font-size: 40px;
+	}
+	.xp{
+		font-size: 30px;
+	}
+	.sp{
+		font-size: 30px;
+		text-align: center;
+	}
+}
+@media screen and (max-width: 535px){
+	.level{
+		font-size: 30px;
+	}
+	#button_5{
+		margin: 10px;
+	}
+	.xp{
+		font-size: 30px;
+	}
+	.sp{
+		font-size: 30px;
+		text-align: center;
+	}
+}
